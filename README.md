@@ -12,7 +12,7 @@ https://android.googlesource.com/platform/external/qemu/+/8e6fc056f813719c519032
 
 Go to Github [releases](https://github.com/fredyshox/android-emulator-m1-x86/releases) page, and download .tar.gz archive and extract it. Emulator executable is located in `CWD/emulator/emulator`.
 
-Perfpormance is bad. Cold boot time is around 2-3 minutes on M1 Pro using WearOS 3 image. But then it's usable for light workflows. ARM64 with hardware virtualization remains supported in this version, unchanged from official distribution provided by Google.
+Performance is bad. Cold boot time is around 2-3 minutes on M1 Pro using WearOS 3 image. But then it's usable for light workflows. ARM64 with hardware virtualization remains supported in this version, unchanged from official distribution provided by Google.
 
 Alternatively you can download emulator source code from [here](https://source.android.com/setup/build/downloading), apply provided patches and build it from source yourself.
 
