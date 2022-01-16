@@ -1,0 +1,8 @@
+# aosp source code
+android-source/
+emulator/
+
+# General 
+.DS_Store
+*.tar.gz
+*.swp
