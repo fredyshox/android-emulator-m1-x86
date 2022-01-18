@@ -34,6 +34,7 @@ Available patches:
 ### What does not work?
 
 * multiple cpu cores - only single core emulation for now, as multi-threaded TCG is not supported for x86 guests on arm hosts, due to differences in memory ordering
+* AVX, F16C x86 extensions - TCG does not support them
 * process hangs when trying to quit via UI - use force quit or `kill -9` 
 
 TBD
