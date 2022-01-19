@@ -54,6 +54,24 @@ index 93b388cd11..575eba127a 100644
  
  #endif // __APPLE__
  
+diff --git a/android/android-emu/android/main-common.c b/android/android-emu/android/main-common.c
+index faba6fac5c..79d93eb7f0 100644
+--- a/android/android-emu/android/main-common.c
++++ b/android/android-emu/android/main-common.c
+@@ -1456,6 +1456,13 @@ bool handleCpuAcceleration(AndroidOptions* opts, const AvdInfo* avd,
+             }
+ 
+         }
++#if defined(__APPLE__) && defined(__arm64__)
++        else if (!strncmp(abi, "x86", 3)) {
++            *accel_mode = ACCEL_OFF;
++            
++            dwarning("Hardware acceleration not supported for %s target", abi);
++        }
++#endif // __APPLE__
+ 
+         AFREE(abi);
+     }
 diff --git a/android/build/cmake/android.cmake b/android/build/cmake/android.cmake
 index f5781981b6..5b2ed65d6d 100644
 --- a/android/build/cmake/android.cmake
